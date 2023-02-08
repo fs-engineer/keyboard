@@ -1,8 +1,9 @@
 import { Button } from './KeyBtn.styled';
 import { useEffect, useState } from 'react';
 
-const KeyBtn = ({ name, code, currentKey }) => {
+const KeyBtn = ({ name, code, currentKey, bgColor, system }) => {
   const [isActive, setIsActive] = useState(false);
+
   useEffect(() => {
     if (code === currentKey) {
       setIsActive(true);
@@ -12,7 +13,14 @@ const KeyBtn = ({ name, code, currentKey }) => {
   }, [code, currentKey]);
 
   return (
-    <Button tabIndex="-1" isActive={isActive} data-code={code} type="button">
+    <Button
+      bgColor={bgColor}
+      system={system}
+      tabIndex="-1"
+      isActive={isActive}
+      data-code={code}
+      type="button"
+    >
       {name}
     </Button>
   );

@@ -1,10 +1,12 @@
 import Keyboard from './components/Keyboard/Keyboard';
+import { ThemeProvider } from 'styled-components';
+import theme from './assets/theme';
 
 function App() {
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <Keyboard />
-    </div>
+    </ThemeProvider>
   );
 }
 

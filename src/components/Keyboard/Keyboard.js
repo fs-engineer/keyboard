@@ -5,24 +5,16 @@ import keyboardData from '../../assets/keyboardData';
 const Keyboard = () => {
   const [currentKey, setCurrentKey] = useState(null);
 
-  const changeCurrentKey = e => {
-    setCurrentKey(e.code);
-  };
-
-  const resetCurrentKey = e => {
-    setCurrentKey(null);
-  };
-
   useEffect(() => {
-    window.addEventListener('keydown', e => changeCurrentKey(e));
+    window.addEventListener('keydown', e => setCurrentKey(e.code));
 
-    return window.removeEventListener('keydown', e => changeCurrentKey(e));
+    return window.removeEventListener('keydown', e => setCurrentKey(e.code));
   }, []);
 
   useEffect(() => {
-    window.addEventListener('keyup', () => resetCurrentKey());
+    window.addEventListener('keyup', () => setCurrentKey(null));
 
-    return window.removeEventListener('keyup', () => resetCurrentKey());
+    return window.removeEventListener('keyup', () => setCurrentKey(null));
   }, []);
 
   return (
@@ -32,7 +24,9 @@ const Keyboard = () => {
           {keyboardData[key].map(el => (
             <KeyBtn
               key={el.code}
+              system={el.system}
               currentKey={currentKey}
+              bgColor={el.color}
               name={el.name}
               code={el.code}
             />
