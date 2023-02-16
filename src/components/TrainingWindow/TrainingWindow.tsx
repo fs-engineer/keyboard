@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Window } from './TrainingWindow.styled';
 
-function TrainingWindow(props) {
+function TrainingWindow() {
   return (
     <Container>
       <Window></Window>
