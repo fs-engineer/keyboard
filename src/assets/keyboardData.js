@@ -109,7 +109,12 @@ const keyboardData = {
       color: theme.background.white,
       system: true,
     },
-    { code: 'Space', name: ' ', color: theme.background.white, system: true },
+    {
+      code: 'Space',
+      name: 'Space',
+      color: theme.background.white,
+      system: true,
+    },
     {
       code: 'MetaRight',
       name: 'Command',
@@ -122,6 +127,8 @@ const keyboardData = {
       color: theme.background.white,
       system: true,
     },
+  ],
+  arrows: [
     {
       code: 'ArrowUp',
       name: 'up',

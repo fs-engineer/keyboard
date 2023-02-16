@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import KeyBtn from '../KeyBtn/KeyBtn';
 import keyboardData from '../../assets/keyboardData';
+import { KeyContainer, KeyWrapper } from './Keyboard.styled';
 
 const Keyboard = () => {
   const [currentKey, setCurrentKey] = useState(null);
@@ -18,10 +19,10 @@ const Keyboard = () => {
   }, []);
 
   return (
-    <>
-      {Object.keys(keyboardData).map(key => (
-        <div key={key}>
-          {keyboardData[key].map(el => (
+    <KeyContainer>
+      <div>
+        <KeyWrapper>
+          {keyboardData.escRow.map(el => (
             <KeyBtn
               key={el.code}
               system={el.system}
@@ -31,9 +32,67 @@ const Keyboard = () => {
               code={el.code}
             />
           ))}
-        </div>
-      ))}
-    </>
+        </KeyWrapper>
+        <KeyWrapper>
+          {keyboardData.firstRow.map(el => (
+            <KeyBtn
+              key={el.code}
+              system={el.system}
+              currentKey={currentKey}
+              bgColor={el.color}
+              name={el.name}
+              code={el.code}
+            />
+          ))}
+        </KeyWrapper>
+        <KeyWrapper>
+          {keyboardData.secondRow.map(el => (
+            <KeyBtn
+              key={el.code}
+              system={el.system}
+              currentKey={currentKey}
+              bgColor={el.color}
+              name={el.name}
+              code={el.code}
+            />
+          ))}
+        </KeyWrapper>
+        <KeyWrapper>
+          {keyboardData.thirdRow.map(el => (
+            <KeyBtn
+              key={el.code}
+              system={el.system}
+              currentKey={currentKey}
+              bgColor={el.color}
+              name={el.name}
+              code={el.code}
+            />
+          ))}
+        </KeyWrapper>
+        <KeyWrapper>
+          {keyboardData.bottomRow.map(el => (
+            <KeyBtn
+              key={el.code}
+              system={el.system}
+              currentKey={currentKey}
+              bgColor={el.color}
+              name={el.name}
+              code={el.code}
+            />
+          ))}
+          {keyboardData.arrows.map(el => (
+            <KeyBtn
+              key={el.code}
+              system={el.system}
+              currentKey={currentKey}
+              bgColor={el.color}
+              name={el.name}
+              code={el.code}
+            />
+          ))}
+        </KeyWrapper>
+      </div>
+    </KeyContainer>
   );
 };
 
