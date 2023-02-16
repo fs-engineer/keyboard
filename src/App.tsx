@@ -1,4 +1,4 @@
-import Keyboard from './components/Keyboard/Keyboard';
+import { Keyboard } from './components/Keyboard';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './assets';
 import TrainingWindow from './components/TrainingWindow/TrainingWindow';

@@ -4,7 +4,7 @@ import keyboardData from '../../assets/keyboardData';
 import { ArrowKeyContainer, KeyContainer, KeyWrapper } from './Keyboard.styled';
 
 const Keyboard = () => {
-  const [currentKey, setCurrentKey] = useState(null);
+  const [currentKey, setCurrentKey] = useState<string | null>(null);
 
   useEffect(() => {
     window.addEventListener('keydown', e => setCurrentKey(e.code));

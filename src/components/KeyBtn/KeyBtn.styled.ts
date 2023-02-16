@@ -3,7 +3,7 @@ import { theme } from '../../assets';
 import { ReactNode } from 'react';
 
 interface IButtonProps {
-  system: boolean;
+  system: boolean | undefined;
   bgColor: string;
   isActive: boolean;
   children?: string | ReactNode;

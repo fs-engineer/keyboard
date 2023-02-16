@@ -11,10 +11,10 @@ import { Button } from './KeyBtn.styled';
 interface IKeyBtnProps {
   name: string | null;
   code: string;
-  currentKey: string;
+  currentKey: string | null;
   bgColor: string;
-  system: boolean;
-  icon: ReactNode;
+  system: boolean | undefined;
+  icon?: ReactNode;
 }
 
 const KeyBtn: FC<IKeyBtnProps> = ({
