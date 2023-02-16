@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import KeyBtn from '../KeyBtn/KeyBtn';
 import keyboardData from '../../assets/keyboardData';
-import { KeyContainer, KeyWrapper } from './Keyboard.styled';
+import { ArrowKeyContainer, KeyContainer, KeyWrapper } from './Keyboard.styled';
 
 const Keyboard = () => {
   const [currentKey, setCurrentKey] = useState(null);
@@ -80,16 +80,19 @@ const Keyboard = () => {
               code={el.code}
             />
           ))}
-          {keyboardData.arrows.map(el => (
-            <KeyBtn
-              key={el.code}
-              system={el.system}
-              currentKey={currentKey}
-              bgColor={el.color}
-              name={el.name}
-              code={el.code}
-            />
-          ))}
+          <ArrowKeyContainer>
+            {keyboardData.arrows.map(el => (
+              <KeyBtn
+                key={el.code}
+                system={el.system}
+                currentKey={currentKey}
+                bgColor={el.color}
+                name={el.name}
+                icon={el.icon}
+                code={el.code}
+              />
+            ))}
+          </ArrowKeyContainer>
         </KeyWrapper>
       </div>
     </KeyContainer>

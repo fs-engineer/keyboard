@@ -1,7 +1,7 @@
 import { Button } from './KeyBtn.styled';
 import { useEffect, useState } from 'react';
 
-const KeyBtn = ({ name, code, currentKey, bgColor, system }) => {
+const KeyBtn = ({ name, code, currentKey, bgColor, system, icon }) => {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const KeyBtn = ({ name, code, currentKey, bgColor, system }) => {
       data-code={code}
       type="button"
     >
-      {name}
+      {icon && !name ? icon : name}
     </Button>
   );
 };

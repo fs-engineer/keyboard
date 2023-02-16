@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../assets/theme';
+import { theme } from '../../assets';
 
 const isGrow = props =>
   props['data-code'] === 'Space' ||

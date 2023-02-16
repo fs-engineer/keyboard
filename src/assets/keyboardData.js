@@ -1,4 +1,10 @@
-import theme from '../assets/theme';
+import { theme } from './theme';
+import {
+  MdKeyboardArrowDown,
+  MdKeyboardArrowLeft,
+  MdKeyboardArrowRight,
+  MdKeyboardArrowUp,
+} from 'react-icons/md';
 
 const keyboardData = {
   escRow: [
@@ -9,7 +15,6 @@ const keyboardData = {
       system: true,
     },
   ],
-
   firstRow: [
     { code: 'Tab', name: 'Tab', color: theme.background.white, system: true },
     { code: 'KeyQ', name: 'q', color: theme.background.pink },
@@ -131,25 +136,29 @@ const keyboardData = {
   arrows: [
     {
       code: 'ArrowUp',
-      name: 'up',
+      name: null,
+      icon: <MdKeyboardArrowUp color="black" />,
       color: theme.background.white,
       system: true,
     },
     {
       code: 'ArrowRight',
-      name: 'right',
+      name: null,
+      icon: <MdKeyboardArrowRight />,
       color: theme.background.white,
       system: true,
     },
     {
       code: 'ArrowDown',
-      name: 'down',
+      name: null,
+      icon: <MdKeyboardArrowDown />,
       color: theme.background.white,
       system: true,
     },
     {
       code: 'ArrowLeft',
-      name: 'left',
+      name: null,
+      icon: <MdKeyboardArrowLeft />,
       color: theme.background.white,
       system: true,
     },

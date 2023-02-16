@@ -10,3 +10,5 @@ export const KeyWrapper = styled.div`
   display: flex;
   justify-content: space-between;
 `;
+
+export const ArrowKeyContainer = styled.div``;
