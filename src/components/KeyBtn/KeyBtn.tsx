@@ -35,7 +35,6 @@ const KeyBtn: FC<IKeyBtnProps> = ({
     }
   }, [code, currentKey]);
 
-  // @ts-ignore
   return (
     <Button
       bgColor={bgColor}

@@ -9,6 +9,7 @@ export const theme: DefaultTheme = {
     cyan: '#5bdbe3',
     blue: '#7872e5',
     orange: '#f6a009',
+    violet: '#bf7cfc',
   },
   border: {
     lightGrey: '#708090FF',

@@ -7,6 +7,87 @@ import {
 } from 'react-icons/md';
 
 const keyboardData = {
+  numbersRow: [
+    {
+      code: 'Backquote',
+      name: '`',
+      color: theme.background.pink,
+      system: false,
+    },
+    { code: 'Digit1', name: '1', color: theme.background.pink, system: false },
+    {
+      code: 'Digit2',
+      name: '2',
+      color: theme.background.yellow,
+      system: false,
+    },
+    {
+      code: 'Digit3',
+      name: '3',
+      color: theme.background.green,
+      system: false,
+    },
+    {
+      code: 'Digit4',
+      name: '4',
+      color: theme.background.cyan,
+      system: false,
+    },
+    {
+      code: 'Digit5',
+      name: '5',
+      color: theme.background.cyan,
+      system: false,
+    },
+    {
+      code: 'Digit6',
+      name: '6',
+      color: theme.background.cyan,
+      system: false,
+    },
+    {
+      code: 'Digit7',
+      name: '7',
+      color: theme.background.blue,
+      system: false,
+    },
+    {
+      code: 'Digit8',
+      name: '8',
+      color: theme.background.green,
+      system: false,
+    },
+    {
+      code: 'Digit9',
+      name: '9',
+      color: theme.background.yellow,
+      system: false,
+    },
+    {
+      code: 'Digit0',
+      name: '0',
+      color: theme.background.pink,
+      system: false,
+    },
+    {
+      code: 'Minus',
+      name: '-',
+      color: theme.background.pink,
+      system: false,
+    },
+    {
+      code: 'Equal',
+      name: '-',
+      color: theme.background.pink,
+      system: false,
+    },
+    {
+      code: 'Backspace',
+      name: 'Delete',
+      color: theme.background.white,
+      system: true,
+    },
+  ],
   escRow: [
     {
       code: 'Escape',
@@ -117,7 +198,7 @@ const keyboardData = {
     {
       code: 'Space',
       name: 'Space',
-      color: theme.background.white,
+      color: theme.background.violet,
       system: true,
     },
     {

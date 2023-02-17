@@ -8,6 +8,7 @@ interface IPalette {
   cyan: string;
   blue: string;
   orange: string;
+  violet: string;
 }
 
 interface IBorder {

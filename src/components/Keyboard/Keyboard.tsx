@@ -6,6 +6,7 @@ import ArrowKeys from '../ArrowKeys/ArrowKeys';
 
 const Keyboard: FC = () => {
   const [currentKey, setCurrentKey] = useState<string | null>(null);
+  console.log(currentKey);
 
   useEffect(() => {
     window.addEventListener('keydown', e => setCurrentKey(e.code));
@@ -24,6 +25,18 @@ const Keyboard: FC = () => {
       <div>
         <KeyWrapper>
           {keyboardData.escRow.map(el => (
+            <KeyBtn
+              key={el.code}
+              system={el.system}
+              currentKey={currentKey}
+              bgColor={el.color}
+              name={el.name}
+              code={el.code}
+            />
+          ))}
+        </KeyWrapper>
+        <KeyWrapper>
+          {keyboardData.numbersRow.map(el => (
             <KeyBtn
               key={el.code}
               system={el.system}
