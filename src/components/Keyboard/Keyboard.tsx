@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import KeyBtn from '../KeyBtn/KeyBtn';
 import keyboardData from '../../assets/keyboardData';
-import { ArrowKeyContainer, KeyContainer, KeyWrapper } from './Keyboard.styled';
+import { KeyContainer, KeyWrapper } from './Keyboard.styled';
+import ArrowKeys from '../ArrowKeys/ArrowKeys';
 
-const Keyboard = () => {
+const Keyboard: FC = () => {
   const [currentKey, setCurrentKey] = useState<string | null>(null);
 
   useEffect(() => {
@@ -80,19 +81,20 @@ const Keyboard = () => {
               code={el.code}
             />
           ))}
-          <ArrowKeyContainer>
-            {keyboardData.arrows.map(el => (
-              <KeyBtn
-                key={el.code}
-                system={el.system}
-                currentKey={currentKey}
-                bgColor={el.color}
-                name={el.name}
-                icon={el.icon}
-                code={el.code}
-              />
-            ))}
-          </ArrowKeyContainer>
+          <ArrowKeys currentKey={currentKey} />
+          {/*<ArrowKeyWrapper>*/}
+          {/*  {keyboardData.arrows.map(el => (*/}
+          {/*    <KeyBtn*/}
+          {/*      key={el.code}*/}
+          {/*      system={el.system}*/}
+          {/*      currentKey={currentKey}*/}
+          {/*      bgColor={el.color}*/}
+          {/*      name={el.name}*/}
+          {/*      icon={el.icon}*/}
+          {/*      code={el.code}*/}
+          {/*    />*/}
+          {/*  ))}*/}
+          {/*</ArrowKeyWrapper>*/}
         </KeyWrapper>
       </div>
     </KeyContainer>

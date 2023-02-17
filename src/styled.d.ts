@@ -7,6 +7,7 @@ interface IPalette {
   green: string;
   cyan: string;
   blue: string;
+  orange: string;
 }
 
 interface IBorder {
