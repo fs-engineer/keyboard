@@ -13,7 +13,7 @@ interface IButtonProps {
   data: string;
 }
 
-const isGrow = ({ data }: any): number =>
+const isGrow = ({ data }: IButtonProps): number =>
   data === 'Space' ||
   data === 'ShiftRight' ||
   data === 'ShiftLeft' ||
@@ -21,15 +21,13 @@ const isGrow = ({ data }: any): number =>
     ? 1
     : 0;
 
-const isArrowKey = ({ data }: any): string | null => {
-  console.log(data);
-  return data === 'ArrowUp' ||
-    data === 'ArrowLeft' ||
-    data === 'ArrowDown' ||
-    data === 'AltRight'
+const isArrowKey = ({ data }: IButtonProps): string | null =>
+  data === 'ArrowUp' ||
+  data === 'ArrowLeft' ||
+  data === 'ArrowDown' ||
+  data === 'ArrowRight'
     ? null
     : '12px';
-};
 
 export const Button = styled.button<IButtonProps>`
   display: flex;

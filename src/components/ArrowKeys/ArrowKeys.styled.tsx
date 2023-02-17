@@ -9,4 +9,5 @@ export const KeyContainer = styled.div`
 export const KeyWrapper = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
 `;

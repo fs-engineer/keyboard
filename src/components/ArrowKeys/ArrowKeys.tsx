@@ -11,7 +11,7 @@ const ArrowKeys: FC<ArrowKeysProps> = ({ currentKey }) => {
   const topKey = keyboardData.arrows[0];
   const leftKey = keyboardData.arrows[3];
   const bottomKey = keyboardData.arrows[2];
-  const rightKey = keyboardData.arrows[2];
+  const rightKey = keyboardData.arrows[1];
 
   return (
     <KeyContainer>
