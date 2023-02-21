@@ -1,14 +1,12 @@
-import { Keyboard } from './components/Keyboard';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './assets';
-import TrainingWindow from './components/TrainingWindow/TrainingWindow';
 import 'styled-components';
+import { Laptop } from './components/Laptop';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <TrainingWindow />
-      <Keyboard />
+      <Laptop />
     </ThemeProvider>
   );
 }

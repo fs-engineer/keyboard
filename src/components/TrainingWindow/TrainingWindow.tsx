@@ -1,12 +1,16 @@
 import React from 'react';
-import { Container, Window } from './TrainingWindow.styled';
+import { Window } from './TrainingWindow.styled';
 
-function TrainingWindow() {
-  return (
-    <Container>
-      <Window></Window>
-    </Container>
-  );
+interface ITrainingWindowProps {
+  exampleData: {
+    text: string;
+    numOfTimes: number;
+  };
+}
+
+function TrainingWindow({ exampleData }: ITrainingWindowProps) {
+  console.log(exampleData);
+  return <Window></Window>;
 }
 
 export default TrainingWindow;

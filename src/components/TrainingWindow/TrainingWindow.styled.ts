@@ -7,9 +7,3 @@ export const Window = styled.div`
   border: 1px solid ${theme.border.lightGrey};
   border-radius: 5px;
 `;
-
-export const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 50px 0 25px;
-`;
