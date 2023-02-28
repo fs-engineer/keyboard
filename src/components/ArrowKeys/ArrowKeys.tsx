@@ -3,11 +3,11 @@ import { keyboardData } from '../../assets';
 import KeyBtn from '../KeyBtn/KeyBtn';
 import { KeyContainer, KeyWrapper } from './ArrowKeys.styled';
 
-interface IArrowKeysProps {
+type ArrowKeysProps = {
   currentKey: string | null;
-}
+};
 
-const ArrowKeys: FC<IArrowKeysProps> = ({ currentKey }) => {
+const ArrowKeys: FC<ArrowKeysProps> = ({ currentKey }) => {
   const topKey = keyboardData.arrows[0];
   const leftKey = keyboardData.arrows[3];
   const bottomKey = keyboardData.arrows[2];

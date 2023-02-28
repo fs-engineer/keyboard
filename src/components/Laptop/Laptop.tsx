@@ -6,6 +6,8 @@ import { Keyboard } from '../Keyboard';
 const example = {
   text: 'asdf',
   numOfTimes: 10,
+  1: 'test',
+  cast: 2,
 };
 
 const Laptop = () => {

@@ -8,16 +8,16 @@ import { Button } from './KeyBtn.styled';
 //   layout: string;
 // }
 
-interface IKeyBtnProps {
+type KeyBtnProps = {
   name: string | null;
   code: string;
   currentKey: string | null;
   bgColor: string;
   system: boolean | undefined;
   icon?: ReactNode;
-}
+};
 
-const KeyBtn: FC<IKeyBtnProps> = ({
+const KeyBtn: FC<KeyBtnProps> = ({
   name,
   code,
   currentKey,

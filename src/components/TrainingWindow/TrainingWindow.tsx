@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Window } from './TrainingWindow.styled';
 
-interface ITrainingWindowProps {
+type TrainingWindowProps = {
   exampleData: {
     text: string;
     numOfTimes: number;
   };
-}
+};
 
-function TrainingWindow({ exampleData }: ITrainingWindowProps) {
+const TrainingWindow: FC<TrainingWindowProps> = ({ exampleData }) => {
   console.log(exampleData);
   return <Window></Window>;
-}
+};
 
 export default TrainingWindow;
